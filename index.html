@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的视频网站 My Video Site</title>
+  <style>
+    body {
+      background-color: #181818;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      text-align: center;
+      padding: 2em 1em 1em 1em;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 2px;
+    }
+    .tagline {
+      color: #aaa;
+      font-size: 1.1em;
+      margin-top: 0.5em;
+    }
+    nav {
+      background: #1a1a1a;
+      padding: 0.8em 0;
+      text-align: center;
+    }
+    nav a {
+      color: #0af;
+      text-decoration: none;
+      margin: 0 1.2em;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2em 1em;
+    }
+    .video-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+    .video-card {
+      background: #222;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0005;
+      width: 320px;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 0.7em;
+    }
+    .video-title {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 0.2em 0 0.5em 0;
+    }
+    .video-desc {
+      font-size: 0.95em;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 0.3em;
+    }
+    @media (max-width: 700px) {
+      .video-list { flex-direction: column; align-items: center; }
+      .video-card { width: 95%; }
+    }
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      background: #191919;
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>我的视频网站</h1>
+    <div class="tagline">分享你的精彩视频，免费搭建，轻松维护！</div>
+  </header>
+  <nav>
+    <a href="#videos">首页</a>
+    <a href="#categories">分类</a>
+    <a href="#about">关于本站</a>
+  </nav>
+  <section class="container" id="videos">
+    <h2>🔥 最新视频</h2>
+    <div class="video-list">
+      <!-- 视频卡片示例，修改iframe的src即可更换视频 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        <div class="video-title">示例视频1</div>
+        <div class="video-desc">这里是视频简介，可以写上视频内容或亮点。</div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1xx411c7mD" allowfullscreen></iframe>
+        <div class="video-title">示例视频2</div>
+        <div class="video-desc">支持B站、YouTube、Archive等外链视频。</div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://archive.org/embed/your-video-id" allowfullscreen></iframe>
+        <div class="video-title">示例视频3</div>
+        <div class="video-desc">只需将视频地址嵌入iframe即可展示！</div>
+      </div>
+    </div>
+  </section>
+  <section class="container" id="categories">
+    <h2>🎬 视频分类</h2>
+    <ul>
+      <li>街舞</li>
+      <li>编舞</li>
+      <li>教学</li>
+      <li>vlog</li>
+      <li>更多自定义分类…</li>
+    </ul>
+  </section>
+  <section class="container" id="about">
+    <h2>🧢 关于本站</h2>
+    <p>
+      本站是一个基于 GitHub Pages 免费搭建的视频分享平台。无需服务器，无需资金投入，适合初学者和个人创作者快速展示自己的视频内容。<br>
+      你可以通过修改本页面，添加自己的视频链接、简介和分类，打造专属风格！<br>
+      <br>
+      有问题或建议欢迎联系邮箱：your@email.com
+    </p>
+  </section>
+  <footer>
+    © 2025 我的视频网站 ｜ Powered by GitHub Pages
+  </footer>
+</body>
+</html>
